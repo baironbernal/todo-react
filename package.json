@@ -1,9 +1,9 @@
 {
+  "homepage": "https://baironbernal.github.io/todo-react",
   "name": "todoapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://baironbernal.github.io/todo-react",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
