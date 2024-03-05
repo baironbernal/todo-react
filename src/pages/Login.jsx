@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Login() {
 
@@ -9,6 +10,7 @@ function Login() {
   });
 
   const { login } = useAuth();
+  const history = useHistory();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +22,7 @@ function Login() {
     const isAuthenticated = await login(formData);
 
     if (isAuthenticated) {
-      window.location.href = '/todo-react/home';
+      return history.push('/todo-react/home');
     }
   };
   
