@@ -370,6 +370,16 @@ li::after {
 	text-decoration: underline;
 }
 
+.login {
+	padding: 20px;
+	background: var(--Grayish-Blue);
+}
+
+.login input {
+	padding: 10px;
+	margin: 20px;
+}
+
 @media screen and (min-width: 950px) {
 	body {
 		font-size: 1.8rem;

@@ -1,23 +1,28 @@
 
 
-import AddTodoForm from "./components/AddTodoForm"
-import TodoList from "./components/TodoList"
-import Footer from "./components/footer/Footer"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Login from "./pages/Login"
+import Home from "./pages/Home"
+import { AuthRoute } from './middleware/AuthRoute';
+import { useAuth } from './context/AuthContext';
+
 
 function App() {
+
+  const { isAuthenticated } = useAuth();
+  console.log('Updating global state:', isAuthenticated);
   
   return (
     <>
-    <div className="header"></div>
-    <main>
-      <div className="content">
-        <h2 className="content_title">TODO</h2>
-      </div>
-
-      <AddTodoForm/>
-      <TodoList/>
-      <Footer/>
-    </main>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/login" exact component={Login} />
+          <AuthRoute path="/home" exact component={Home} />
+        </Switch>
+      </Router>
+    
     </>
   )
 }
