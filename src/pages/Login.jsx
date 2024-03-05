@@ -20,7 +20,7 @@ function Login() {
     const isAuthenticated = await login(formData);
 
     if (isAuthenticated) {
-      window.location.href = '/home';
+      window.location.href = '/todo-react/home';
     }
   };
   

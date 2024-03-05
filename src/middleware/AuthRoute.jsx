@@ -15,7 +15,7 @@ export const AuthRoute = ({ component: Component, ...rest }) => {
           <Component {...props} />
         ) : (
           (() => {
-            return history.push('/login');
+            return history.push('/todo-react/login');
             
           })()
         )

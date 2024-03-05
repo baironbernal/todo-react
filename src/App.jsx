@@ -17,9 +17,9 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Login} />
-          <Route path="/login" exact component={Login} />
-          <AuthRoute path="/home" exact component={Home} />
+          <Route path="/todo-react/" exact component={Login} />
+          <Route path="/todo-react/login" exact component={Login} />
+          <AuthRoute path="/todo-react/home" exact component={Home} />
         </Switch>
       </Router>
     
